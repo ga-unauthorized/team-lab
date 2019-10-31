@@ -7,5 +7,5 @@
 // require('./example')
 
 $(() => {
-  // your JS code goes here
+  $('#button').on('submit', uiEvents.showBooks)
 })
