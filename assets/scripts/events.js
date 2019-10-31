@@ -1,14 +1,16 @@
+'use strict'
 const api = require('./api')
+
 const ui = require('./ui')
 
-const onshowBooks = function (event) {
+const showBooks = function (event) {
   event.preventDefault()
-  const form = event.target
-  api.onCreateWorkout(formData)
-    .then(ui.onshowBooksSuccess)
-    .catch(ui.onshowBooksFailure)
-  // console.log(api.displayWorkouts().then(response => response.json()))
+  console.log('into event')
+  // const form = event.target
+  api.onshowBooks()
+    .then(ui.showBooksSuccess)
+    .catch(ui.showBooksFailure)
 }
 module.exports = {
-  onshowBooks
+  showBooks
 }

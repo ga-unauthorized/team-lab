@@ -1,8 +1,8 @@
-const consthowBooksSuccess = () => {
+const showBooksSuccess = () => {
   successMessage('Here are your books!')
   $('#message').css('color', 'green')
 }
-const onshowBooksFailure = () => {
+const showBooksFailure = () => {
   failureMessage('Could not find books')
   $('#message').css('color', 'red')
 }
@@ -22,6 +22,6 @@ const failureMessage = function (newText) {
 }
 
 module.exports = {
-  onshowBooksSuccess,
-  onshowBooksFailure
+  showBooksSuccess,
+  showBooksFailure
 }
