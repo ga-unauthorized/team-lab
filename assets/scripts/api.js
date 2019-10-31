@@ -1,9 +1,9 @@
-const config = require('./config')
+// const config = require('./config')
 
 const indexBooks = function () {
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/books'
+    url: 'https://wdi-library-api.herokuapp.com/books'
   })
 }
 
