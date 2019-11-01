@@ -1,19 +1,20 @@
 {{#each books as |book|}}
   {{log book}}
-  <section data-id="{{book.id}}">
-    <h6>Title:</h6>
-    <h3>
-      {{limit book.title 15}}
-    </h3>
-    <h6>Author:</h6>
-    <p>
-      {{#if book.author}}
-        {{book.author}}
-      {{else}}
-        No author provided.
-      {{/if}}
-    </p>
-    <!-- {{> partial}} -->
+
+  <section class='each_book'>
+    <div id="page{{book.id}}" class="page">
+      <div class="pageFace front">
+        <h2 class="wordRed">Title:</h2>
+        <h2>{{book.title}}</h2>
+        <h2 class="wordRed">Author:</h2>
+        <h2>{{book.author}}</h2>
+        <div class="pageFoldRight"></div>
+        <img class="dotted pic" src="https://i.imgur.com/rHiKBiI.png" width="42" height="42">
+      </div>
+      <div class="pageFace back">
+        <div class="pageFoldLeft"></div>
+      </div>
+    </div>
   </section>
 
 {{/each}}
